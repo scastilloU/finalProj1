@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Welcome Page</title>
+  </head>
+  <body>
+    <h1>Welcome, <%= user.yourname %></h1>
+    <p>Your User ID: <%= user._id %></p>
+    <p>Your User email <%= user.username %></p>
+    <p>Your User pass: <%= user.password %></p>
+    <form id="userIdToDeleteForm" action="/delete" method="POST">
+      <label for="userIdToDelete">User ID to Delete:</label>
+      <input type="text" name="userId" id="userIdToDelete">
+      <button type="submit">Delete User</button>
+  </form>
+<hr>
+  <form id="userToUpdate" action="/retrieve" method="POST">
+    <label for="name">Your name:</label>
+      <input type="text" name="userId" id="userIdToDelete">
+      <input type="text" name="yourname" id="yourname" placeholder="Change Name..">
+      <label for="username">User Name or Email:</label>
+      <input type="email" name="username" id="username" placeholder="Change username or email..">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" placeholder="Change Password">
+    <button type="submit">Change</button>
+ </form>
+ <div id="info"></div>
+  </body>
+  <script>
+  </script>
+</html>
